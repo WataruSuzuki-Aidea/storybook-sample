@@ -30,9 +30,9 @@ export default {
         return ['small', 'medium', 'large'].indexOf(value) !== -1;
       },
     },
-    backgroundColor: {
-      type: String,
-    },
+    // backgroundColor: {
+    //   type: String,
+    // },
   },
 
   emits: ['click'],
@@ -48,9 +48,9 @@ export default {
         [`storybook-button--${props.tone || 'secondary'}`]: true,
         [`storybook-button--${props.size || 'medium'}`]: true,
       })),
-      style: computed(() => ({
-        backgroundColor: props.backgroundColor,
-      })),
+      // style: computed(() => ({
+      //   backgroundColor: props.backgroundColor,
+      // })),
       onClick() {
         emit('click');
       },

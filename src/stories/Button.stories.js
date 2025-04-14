@@ -8,8 +8,9 @@ export default {
   component: MyButton,
   tags: ['autodocs'],
   argTypes: {
+    tone: { control: { type: 'select' }, options: ['primary', 'secondary', 'tertiary'] },
     size: { control: { type: 'select' }, options: ['small', 'medium', 'large'] },
-    backgroundColor: { control: 'color' },
+    // backgroundColor: { control: 'color' },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
@@ -19,7 +20,7 @@ export default {
 export const Primary = {
   args: {
     primary: true,
-    tone:'primary',
+    tone:"tertiary",
     label: 'ボタン',
   },
 };
